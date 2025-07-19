@@ -169,7 +169,9 @@ def main():
     
     # Save model
     print("\nSaving model...")
-    model.save_weights('saved_weights.npz')
+    # Create data directory if it doesn't exist
+    os.makedirs('data', exist_ok=True)
+    model.save_weights('data/saved_weights.npz')
     
     # Plot training history
     print("\nPlotting training history...")
@@ -185,7 +187,7 @@ def main():
     print("Training Complete!")
     print("=" * 50)
     print(f"Final Test Accuracy: {test_accuracy:.4f}")
-    print(f"Model saved to: saved_weights.npz")
+    print(f"Model saved to: data/saved_weights.npz")
     print(f"Training plots saved to: images/training_history.png")
     
     # Save training results

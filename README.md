@@ -47,7 +47,7 @@ python train.py
 This will:
 - Download the MNIST dataset
 - Train the neural network
-- Save the trained weights to `saved_weights.npz`
+- Save the trained weights to `data/saved_weights.npz`
 - Display training progress and plots
 
 ### Running the GUI
@@ -82,7 +82,7 @@ mydigitai/
 ├── evaluate.py        # Model evaluation
 ├── gui.py            # Interactive GUI application
 ├── utils.py          # Utility functions
-├── saved_weights.npz # Trained model weights
+├── data/saved_weights.npz # Trained model weights
 ├── requirements.txt   # Python dependencies
 └── README.md         # This file
 ```
