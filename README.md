@@ -21,7 +21,7 @@ The final product includes a simple GUI where users can draw digits and the mode
 - **Hidden Layer 2**: 64 neurons, ReLU activation
 - **Output Layer**: 10 neurons, Softmax activation (representing classes 0-9)
 
-**📖 [Detailed Model Implementation](MODEL_DETAILS.md)** - Comprehensive explanation of the neural network architecture, algorithms, and mathematical foundations.
+**📖 [Detailed Model Implementation](MODEL.md)** - Comprehensive explanation of the neural network architecture, algorithms, and mathematical foundations.
 
 ## Installation
 
