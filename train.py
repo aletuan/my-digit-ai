@@ -12,6 +12,9 @@ import time
 
 def plot_training_history(train_losses, val_losses, train_accuracies, val_accuracies):
     """Plot training history"""
+    # Create images directory if it doesn't exist
+    os.makedirs('images', exist_ok=True)
+    
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
     
     # Plot losses
@@ -33,7 +36,7 @@ def plot_training_history(train_losses, val_losses, train_accuracies, val_accura
     ax2.grid(True)
     
     plt.tight_layout()
-    plt.savefig('training_history.png', dpi=300, bbox_inches='tight')
+    plt.savefig('images/training_history.png', dpi=300, bbox_inches='tight')
     plt.show()
 
 
@@ -183,7 +186,7 @@ def main():
     print("=" * 50)
     print(f"Final Test Accuracy: {test_accuracy:.4f}")
     print(f"Model saved to: saved_weights.npz")
-    print(f"Training plots saved to: training_history.png")
+    print(f"Training plots saved to: images/training_history.png")
     
     # Save training results
     results = {

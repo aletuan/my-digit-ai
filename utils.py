@@ -30,8 +30,11 @@ def load_training_results(filename='training_results.json'):
         return None
 
 
-def plot_learning_curves(train_losses, val_losses, train_accuracies, val_accuracies, save_path='learning_curves.png'):
+def plot_learning_curves(train_losses, val_losses, train_accuracies, val_accuracies, save_path='images/learning_curves.png'):
     """Plot learning curves"""
+    # Create images directory if it doesn't exist
+    os.makedirs('images', exist_ok=True)
+    
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 5))
     
     # Plot losses
@@ -57,8 +60,11 @@ def plot_learning_curves(train_losses, val_losses, train_accuracies, val_accurac
     plt.show()
 
 
-def visualize_weights(model, layer_idx=0, save_path='weight_visualization.png'):
+def visualize_weights(model, layer_idx=0, save_path='images/weight_visualization.png'):
     """Visualize weights of a specific layer"""
+    # Create images directory if it doesn't exist
+    os.makedirs('images', exist_ok=True)
+    
     if layer_idx >= len(model.weights):
         print(f"Layer {layer_idx} does not exist. Model has {len(model.weights)} layers.")
         return
